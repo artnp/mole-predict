@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Srisakdi&display=swap');
+        body{
+            font-family: 'Srisakdi', cursive;
+            font-size:x-large
+        }
+        </style>
+    
+    <title>ดูไฝ จะ ดี แล ร้าย</title>
+</head>
+<body>
+    <center>
+    <h1>ดูไฝ จะ ดี แล ร้าย</h1>
+   <h4>อนึ่ง •ไฝ ดี นั้น สี ดำ ๆ เหมือน รัก แล สี แดง ๆ เหมือน ชาด เรียก ว่า ไฝ ดี != ถ้า <font color='red'>สี ขาว สี เหลือง สาม สี นี้ มิดี แล</font></h4>
+  <br>
+       ตำแหน่ง: <select id="position" style="font-size:30px;width:160px;height:40px">
+        <optgroup label="ช่วงใบหน้า">
+            <option value="ผม">ผม</option>
+            <option value="หน้าผาก">หน้าผาก</option>
+            <option value="แสกหน้า">แสกหน้า</option>
+            <option value="หน้า">หน้า</option>
+            <option value="คิ้ว">คิ้ว</option>
+            <option value="หลางหว่างคิ้ว">กลางหว่างคิ้ว</option>
+            <option value="หางตา">หางตา</option>
+            <option value="ลูกตา">ลูกตา</option>
+            <option value="หัวตา">หัวตา</option>
+            <option value="เหนือใบหู ฤา ริมโคนหู">เหนือใบหู ฤา ริมโคนหู</option>
+            <option value="ใบหู">ใบหู</option>
+            <option value="รูหู">รูหู</option>
+            <option value="ปลายติ่งหู">ปลายติ่งหู</option>
+            <option value="กระดูกเหนือแก้ม">กระดูกเหนือแก้ม</option>
+            <option value="โคนสันจมูก">โคนสันจมูก</option>
+            <option value="ริมสันจมูก">ริมสันจมูก</option>
+            <option value="ปลายจมูก">ปลายจมูก</option>
+            <option value="โครงจมูก">โครงจมูก</option>
+            <option value="เหนือฝีปาก">เหนือฝีปาก</option>
+            <option value="ริมฝีปาก">ริมฝีปาก</option>   
+            <option value="ขี้แมลงวันขึ้นเต็มไปทั้งหน้า">ขี้แมลงวันขึ้นเต็มไปทั้งหน้า</option>
+            </optgroup> <optgroup label="ลำตัว">
+            <option value="คอหอย">คอหอย</option>
+            <option value="หลังคอ">หลังคอ</option>
+            <option value="บ่า">บ่า</option>
+            <option value="หัวไหล่">หัวไหล่</option>
+            <option value="สะบัก">สะบัก</option>
+            <option value="นม">นม</option>
+            <option value="กระดูกสันหลัง">กระดูกสันหลัง</option>
+        </optgroup> <optgroup label="แขน">
+            <option value="ใต้รักแร้">ใต้รักแร้</option>
+            <option value="หัวปุ่มศอก">หัวปุ่มศอก</option>
+            <option value="ข้อศอกหนีบ">ข้อศอกหนีบ</option>
+            <option value="ใต้แขนใต้ศอก">ใต้แขนใต้ศอก</option>
+            <option value="ใกล้ข้อมือ">ใกล้ข้อมือ</option>
+            <option value="ฝ่ามือ">ฝ่ามือ</option>
+        </optgroup> <optgroup label="ช่วงล่าง">
+            <option value="บั้นเอว">บั้นเอว</option>
+            <option value="รูสะดือ">รูสะดือ</option>
+            <option value="น่าตัก">น่าตัก</option>
+            <option value="โคนขา">โคนขา</option>
+            <option value="ที่ลับ">ที่ลับ</option>
+            <option value="ปลายลึงค์">ปลายลึงค์</option>
+            <option value="เข่าหนีบ">เข่าหนีบ</option>
+            <option value="น่าแข้ง">น่าแข้ง</option>
+            <option value="ฝ่าเท้า">ฝ่าเท้า</option>
+            <option value="ริมนิ้วเท้า">ริมนิ้วเท้า</option>
+            
+            
+            
+            
+            
+ 
+
+        </optgroup>
+
+          </select> 
+          ฝั่ง: <select id="side" style="font-size:30px;width:100px;height:40px">
+            <option value=""></option>
+            <option value="ซ้าย">ซ้าย</option>
+            <option value="ขวา">ขวา</option>
+            <option value="บน">บน</option>
+            <option value="ล่าง">ล่าง</option>
+            <option value="กลาง">กลาง</option>
+            <option value="หน้า">หน้า</option>
+          </select> 
+        จำนวน : <input type="number" id="number" style="font-size:30px;width:50px;height:40px"> เม็ด
+
+      => <button class="cal" onsubmit="cal()" style="font-size:24px">ทำนาย</button>
+      <br><br>
+      <hr>
+   <b><div id='text'></div></b>
+
+     
+    </center>
+    <script>
+
+
+
+
+function cal() {
+position = document.getElementById("position").value
+side = document.getElementById("side").value
+number = document.getElementById("number").value
+
+if (position === 'หน้า' && number === '7' && side === 'ซ้าย' || position === 'หน้า' && number === '5' && side === 'ซ้าย'){
+    document.getElementById('text').innerHTML = 'ถ้า มี อยู่ ข้าง ซ้าย เรียง กัน เปน หมู่ จะ มี ทรพย์ สิน มาก'
+} else if (position === 'หน้า' && number === '7' && side === 'ขวา' || position === 'หน้า' && number === '5' && side === 'ขวา'){
+    document.getElementById('text').innerHTML = 'จะมี ยศ ศักดิ์'
+} else if (position === 'คิ้ว' && side === 'ซ้าย'){
+    document.getElementById('text').innerHTML = 'จะ เกิด ลาภ'
+} else if (position === 'คิ้ว' && side === 'ขวา'){
+    document.getElementById('text').innerHTML = 'อายุ ยืน'
+} else if (position === 'ผม'){
+    document.getElementById('text').innerHTML = 'วาศนา ดี นัก ถ้า อยู่ สูง ขึ้น ไป ยิ่ง ดี จะ มี บุญ'
+} else if (position === 'หน้าผาก' && number === '7'){
+    document.getElementById('text').innerHTML = 'มีไฝ ๗ เม็ด ดุจ ดาว จระเข้ ดี จะ มี บุญ'
+} else if (position === 'ใบหู'){
+    document.getElementById('text').innerHTML = 'ผู้ นั้น จะ มี ปัญญา มาก'
+} else if (position === 'รูหู'){
+    document.getElementById('text').innerHTML = 'อายุ จะ ยืน'
+} else if (position === 'หลางหว่างคิ้ว'){
+    document.getElementById('text').innerHTML = 'จะ มี วาศนา'
+} else if (position === 'ปลายติ่งหู'){
+    document.getElementById('text').innerHTML = 'จะ มี ลาภ เนือง ๆ'
+} else if (position === 'ลูกตา'){
+    document.getElementById('text').innerHTML = 'ผู้ นั้น เปน คนใจ กะตัญญู ต่อ บิดา มารดา'
+} else if (position === 'ริมฝีปาก' && side === 'บน'){
+    document.getElementById('text').innerHTML = 'จะ ให้ คุณ เปน คน มัก พูด มาก'
+} else if (position === 'แสกหน้า' && side === 'กลาง'){
+    document.getElementById('text').innerHTML = 'จัก ให้ โทษ ไม่ ดี แล มัก จะ ต้อง กำพร้า บิดา ฤา มารดา'
+} else if (position === 'หัวตา' && side === 'ล่าง'){
+    document.getElementById('text').innerHTML = 'ตรง นั้น เปน ทาง น้ำ ตา ไหล ทาย ว่า ผู้ นั้น มัก จะ มี ความเศร้าโศก อยู่ เนือง ๆ'
+} else if (position === 'กระดูกเหนือแก้ม'){
+    document.getElementById('text').innerHTML = 'มิดี เลย ถ้า ผู้ นั้น มี ยศ จะ ต้อง เสื่อม ยศ มี ทรัพย์ จะ ต้อง เสีย ทรัพย์'
+} else if (position === 'โคนสันจมูก' && side === 'กลาง'){
+    document.getElementById('text').innerHTML = 'จะ อาภัพ'
+} else if (position === 'ริมสันจมูก'){
+    document.getElementById('text').innerHTML = 'มิดี'
+} else if (position === 'เหนือใบหู ฤา ริมโคนหู'){
+    document.getElementById('text').innerHTML = 'มิดี'
+} else if (position === 'ปลายจมูก'){
+    document.getElementById('text').innerHTML = 'มิดี มัก ต้อง บาด เจ็บ'
+} else if (position === 'โครงจมูก'){
+    document.getElementById('text').innerHTML = 'มัก จะ ข้อง ขัด ทุก สิ่ง'
+} else if (position === 'เหนือฝีปาก'){
+    document.getElementById('text').innerHTML = 'มัก จะ ได้ โทษ เพราะ ปาก ตน'
+} else if (position === 'หางตา'){
+    document.getElementById('text').innerHTML = 'มัก จะ ต้อง ไร้ คู่ มิ ฉนั้น จะ มี คู่ ที่ ไม่ พอ ใจ แห่ง ตน'
+} else if (position === 'ขี้แมลงวันขึ้นเต็มไปทั้งหน้า'){
+    document.getElementById('text').innerHTML = 'ถ้า คน อายุ น้อย มิดี ถ้า คน สูง อายุ ดี'
+} else if (position === 'ที่ลับ'){
+    document.getElementById('text').innerHTML = 'ยิ่ง ดี หนัก'
+} else if (position === 'ใต้แขนใต้ศอก'){
+    document.getElementById('text').innerHTML = 'ถ้า มี ไฝ ดำ อยู่ ที่ ใต้ แขน ใจ้ ศอก ลง ไป มิดี มัก จะ เจ็บ'
+} else if (position === 'ใกล้ข้อมือ'){
+    document.getElementById('text').innerHTML = 'ดี จะ มี เงิน'
+} else if (position === 'ข้อศอกหนีบ'){
+    document.getElementById('text').innerHTML = 'ดี จะ มี ทรัพย์ มาก'
+} else if (position === 'หัวปุ่มศอก'){
+    document.getElementById('text').innerHTML = 'มิดี'
+} else if (position === 'หัวไหล่'){
+    document.getElementById('text').innerHTML = 'เปน คน ฝี มือ ดี ใน การ ช่าง'
+} else if (position === 'ใต้รักแร้'){
+    document.getElementById('text').innerHTML = 'จะ มี ทรัพย์ และ เปน ผู้ มี ใจ ศรัทธา มาก'
+} else if (position === 'สะบัก' && side === 'หน้า'){
+    document.getElementById('text').innerHTML = 'มิดี'
+} else if (position === 'บ่า' && side === 'กลาง'){
+    document.getElementById('text').innerHTML = 'จะ ต้อง ลำบาก มาก'
+} else if (position === 'บ่า' && side === 'หน้า'){
+    document.getElementById('text').innerHTML = 'มิดี'
+} else if (position ===  'บ่า' && side === 'หลัง'){
+    document.getElementById('text').innerHTML = 'จะ มี เงิน'
+} else if (position === 'ฝ่ามือ' || position === 'ฝ่ามือ' && side === 'หน้า'){
+    document.getElementById('text').innerHTML = 'ดี จะ มี วาศนาใหญ่'
+} else if (position === 'ฝ่ามือ' && side === 'หลัง'){
+    document.getElementById('text').innerHTML = 'จะ เกิด ลาภ'
+} else if (position === 'น่าตัก'){
+    document.getElementById('text').innerHTML = 'จะ มี ค่า ทาษใช้'
+} else if (position === 'โคนขา' && side === 'หลัง'){
+    document.getElementById('text').innerHTML = 'ดี จะ มี วาศนา'
+} else if (position === 'เข่าหนีบ'){
+    document.getElementById('text').innerHTML = 'จะ มี ทรัพย์ มาก'
+} else if (position === 'น่าแข้ง'){
+    document.getElementById('text').innerHTML = 'ชื่อ เสียง จะ ปรากฏโด่ง ดัง'
+} else if (position === 'ฝ่าเท้า'){
+    document.getElementById('text').innerHTML = 'จะได้ เปน พระยา'
+} else if (position === 'ริมนิ้วเท้า'){
+    document.getElementById('text').innerHTML = 'จะ มี ค่า ทาษ บริวาร มาก'
+} else if (position === 'นม' && side === 'บน'){
+    document.getElementById('text').innerHTML = 'จะ มี ลูก มาก'
+} else if (position === 'นม' && side === 'ล่าง'){
+    document.getElementById('text').innerHTML = 'จะ มี ทรัพย์ สิน มาก'
+} else if (position === 'นม' && side === 'ล่าง'){
+    document.getElementById('text').innerHTML = 'อายุ จะ ยืน มี ความ ศุข บริบูรณ์ ดี'
+} else if (position === 'นม' && side === 'ซ้าย'){
+    document.getElementById('text').innerHTML = 'จะ มี ปัญญา ลึกซึ้ง สมควร เปน นายทหาร'
+} else if (position === 'รูสะดือ'){
+    document.getElementById('text').innerHTML = 'จะ มี วาศนา จะได้ บุตร์ ที่ มี บุญ'
+} else if (position === 'รูสะดือ' && number === '2'){
+    document.getElementById('text').innerHTML = 'วาศนา เปน ศุข'
+} else if (position === 'คอหอย' && side === 'บน'){
+    document.getElementById('text').innerHTML = 'เหนือ ลูก กระเดือก จะ มี คน ช่วย สงเคราะห์ เนืองๆ'
+} else if (position === 'คอหอย' && side === 'ล่าง'){
+    document.getElementById('text').innerHTML = 'ใต้ ลูก กระเดือก มิดี'
+} else if (position === 'หลังคอ'){
+    document.getElementById('text').innerHTML = 'จะ มี อำนาจ มาก'
+} else if (position === 'กระดูกสันหลัง' && side === 'กลาง'){
+    document.getElementById('text').innerHTML = 'อายุ ยืน'
+} else if (position === 'บั้นเอว'){
+    document.getElementById('text').innerHTML = 'จะ ต้อง ไป อยู่ ที่ ไกล'
+} else if (position === 'ตะโพก'){
+    document.getElementById('text').innerHTML = 'จะ มี ทรัพย์ สิน ยศ ศักดิ์'
+} else if (position === 'ปลายลึงค์'){
+    document.getElementById('text').innerHTML = 'จะ มี ลูก ดี แล'
+} 
+else {
+    document.getElementById('text').innerHTML = 'ไม่ มี คำ ทำนาย แล'
+}
+
+
+
+
+}
+document.querySelector('.cal').addEventListener("click", ()=>cal())
+
+</script>
+</body>
+</html>
